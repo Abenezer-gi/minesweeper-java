@@ -143,28 +143,7 @@ public class MineSweepGame
             }
         }
 
-        // TODO: Set the value of all cells that do not contain mines.
-        //   The value of a cell is the number of mines adjacent to the cell,
-        //   or the value MINE if the cell has a mine on it.
-        //   Mines have been randomly placed in the array cells.
-        //   The value of all cells that do not have mines on them have been
-        //   initialized with a value of 0.
-        //   We can get access to the value of the cell at row i and column j
-        //   with:
-        //      cells[i][j].value
-        //   To test if the cell has a mine on it, we test if its value is
-        //   equal to MINE:
-        //      cells[i][j].value == MINE
-        //   What to do:
-        //      for each cell that does not have a mine on it, set its
-        //      value equal to the number of mines adjacent to the cell.
-        //      A mine is adjacent to a cell c if
-        //         it is on a cell that shares a side with c, or
-        //         it is on a cell that touches a corner of c.
-        //   Use NUM_ROWS and NUM_COLS for the number of rows and columns
-        //   in the game respectively. Do NOT use magic numbers.
-
-
+        
        for (int i = 0; i < NUM_ROWS; i++)
        {
            for (int j = 0 ; j < NUM_COLS; j++ )
@@ -192,9 +171,7 @@ public class MineSweepGame
        }
 
 
-        // TODO: FOR TESTING PURPOSES ONLY!
-        //   Uncomment the lines below to show all cells.
-        //   When you are done testing, recomment the lines.
+       
 
 
         /*for (int i = 0; i < NUM_ROWS; ++i)
@@ -263,41 +240,7 @@ public class MineSweepGame
     // then recursively show each of its adjacent cells.
     public void showCell(int row, int col)
     {
-        // TODO: If the cell at the given row and col has a flag or
-        //   the game is over, then do nothing.
-        //   Otherwise, show the cell.
-        //   To test if the cell has a flag on it, call:
-        //      isCellFlagged(row, col)
-        //   To test if the game is over, call:
-        //      isOver();
-        //   To mark the cell as shown, write:
-        //      cells[row][col].isShowing = true;
-        //   This only marks the cell as shown. It does not update the user
-        //   interface to show the cell on the screen. To notify the user
-        //   interface of this update, write:
-        //      ui.updateCell(row, col);
-        //   The value of a cell is the number of mines adjacent to the cell,
-        //   or the value MINE if the cell has a mine on it.
-        //   These values are already computed for us when a new game begins.
-        //   To get the value of the cell, write:
-        //      cells[row][col].value
-        //   To test if the cell has a mine on it, we can use the test:
-        //      cells[row][col].value == MINE
-        //   If the cell has a mine on it, then set the class variable
-        //   hasHitMine to true:
-        //      hasHitMine = true;
-        //   Otherwise, if the cell does not have a mine on it, then
-        //   decrement the class variable numCellsLeft by 1:
-        //      numCellsLeft--;
-        //   If the value of the cell is 0, then recursively
-        //   show all of its adjacent cells so that the whole connected
-        //   region of cells with value 0 is shown along with the non-zero
-        //   numbered cells adjacent to this region.
-        //   For example, if the cell at row i and column j is an
-        //   adjacent cell, we can call:
-        //      showCell(i, j);
-        //   Use NUM_ROWS and NUM_COLS for the number of rows and columns
-        //   in the game respectively. Do NOT use magic numbers.
+       
 
         if (isOver() || isCellFlagged(row, col))
         {
